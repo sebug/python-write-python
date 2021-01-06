@@ -7,6 +7,8 @@ class Visitor(ast.NodeVisitor):
         keyword_names = [kw.arg for kw in node.keywords]
         if 'username' in keyword_names and 'password' in keyword_names:
             print('Ah ah ah!')
+        elif len(node.args) >= 2:
+            print('Ah ah ah positional!')
         self.generic_visit(node)
     
     def visit_Call(self, node):
