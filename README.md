@@ -5,3 +5,5 @@ Toying around with the ast module in Python, based on the FOSDEM 2019 Talk "Maki
 	source .venv/bin/activate
 	pip install -r requirements.txt
 	python main.py samples/connect_simple.py
+
+Next step: rewriting the connect calls to use the credentials file.
