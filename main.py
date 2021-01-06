@@ -1,5 +1,6 @@
 import ast
 import astpretty
+import astor
 import sys
 
 class Visitor(ast.NodeVisitor):
@@ -32,6 +33,8 @@ def analyze_file(f):
     with open(f, 'r') as file:
         file_content = file.read()
         analyzed = analyze_file_content(file_content)
+        pretty_printed = astor.to_source(analyzed)
+        print(pretty_printed)
 
     
 analyze_file(sys.argv[1])

@@ -1,1 +1,2 @@
+astor==0.8.1
 astpretty==2.1.0
